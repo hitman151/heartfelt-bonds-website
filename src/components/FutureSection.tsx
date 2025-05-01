@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Calendar, Tree } from "lucide-react";
+import { Calendar, TreeDeciduous } from "lucide-react";
 
 const FutureSection = () => {
   const futureActivities = [
@@ -71,7 +71,7 @@ const FutureSection = () => {
           <Card className="max-w-lg mx-auto border-heartfelt-300 shadow-md">
             <CardHeader className="pb-2">
               <div className="mx-auto mb-2">
-                <Tree className="h-8 w-8 text-heartfelt-500" />
+                <TreeDeciduous className="h-8 w-8 text-heartfelt-500" />
               </div>
               <h3 className="text-xl font-semibold font-playfair">Symbolic New Beginning</h3>
             </CardHeader>
@@ -84,7 +84,7 @@ const FutureSection = () => {
                 It symbolizes my commitment to nurturing our relationship and my hope for its renewal.
               </p>
               <div className="aspect-video bg-muted rounded-md flex items-center justify-center mt-4">
-                <Tree className="h-16 w-16 text-muted-foreground animate-pulse-gentle" />
+                <TreeDeciduous className="h-16 w-16 text-muted-foreground animate-pulse-gentle" />
               </div>
               <p className="text-sm text-muted-foreground italic mt-2">
                 (You can add an actual certificate image here)
