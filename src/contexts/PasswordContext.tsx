@@ -13,7 +13,7 @@ export const PasswordProvider = ({ children }: { children: ReactNode }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   
   // This would typically be stored securely, not hardcoded
-  const correctPassword = "YourNickname+Apology";
+  const correctPassword = "mannusorry";
   
   const authenticate = (password: string) => {
     const isValid = password === correctPassword;

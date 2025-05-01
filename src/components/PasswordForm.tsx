@@ -58,7 +58,7 @@ const PasswordForm = () => {
                 className="border-heartfelt-300 focus:border-heartfelt-500"
               />
               <p className="text-xs text-muted-foreground italic">
-                Hint: Try "YourNickname+Apology"
+                Hint: Try "mannusorry"
               </p>
             </div>
           </div>
