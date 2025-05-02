@@ -4,13 +4,11 @@ import { Calendar, TreeDeciduous } from "lucide-react";
 
 const FutureSection = () => {
   const futureActivities = [
-    "Have a casual coffee catchup when you're ready",
-    "Visit the art exhibition we always talked about",
-    "Take that cooking class we bookmarked",
-    "Go on a weekend hiking trip to reconnect with nature",
-    "Volunteer together at the animal shelter",
-    "Watch that movie we've both been wanting to see",
-    "Try that new restaurant that opened downtown"
+    "Dono milkr placement Nikalenge TAGDA",
+    "Baki ka tum btao kya krna hai",
+    "Tereko dikhayenge apna cooking skills",
+    "Baki sab tere upar🙃",
+    
   ];
 
   return (
@@ -19,26 +17,29 @@ const FutureSection = () => {
         <div className="text-center mb-8 animate-fade-in">
           <Calendar className="inline-block text-heartfelt-500 w-8 h-8 mb-4" />
           <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-4">Looking Forward</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          {/* <p className="text-muted-foreground max-w-2xl mx-auto">
             I'm hopeful for our friendship's future. Here's how I envision rebuilding our connection, 
             at your pace and comfort level.
-          </p>
+          </p> */}
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 mb-12 animate-fade-in">
           <Card className="border-heartfelt-300 shadow-md">
             <CardHeader className="pb-2">
-              <h3 className="text-xl font-semibold font-playfair">My Vision For Our Friendship</h3>
+              <h3 className="text-xl font-semibold font-playfair">Tumhara Saath</h3>
             </CardHeader>
             <CardContent className="space-y-4">
               <p>
-                I hope that with time, patience, and consistent effort on my part, we can rebuild a friendship that's even stronger than before—one founded on mutual respect, clear communication, and genuine care.
+                I hope that with time, patience, and consistent effort on my part, we can rebuild the bond that's even stronger than before.
               </p>
               <p>
-                I envision us being able to laugh together again, to share our thoughts freely, and to support each other through life's challenges and celebrations.
+              I want a lady, and you are my lady luck. You have always been my well-wisher, wanted the best for me, supported me in everything, and most importantly – you’ve always stood by me.
               </p>
               <p>
-                Most importantly, I hope for a friendship where you feel valued, respected, and heard—always.
+              Pata hai mereko kitna bura laga when I realized I hurt you. Ab tumhara ignoring aur guilt double kar raha hai. Just ek proper conversation chahiye .
+              </p>
+              <p>
+              I want to sort things out please.... Manasvi.
               </p>
             </CardContent>
           </Card>
@@ -67,7 +68,7 @@ const FutureSection = () => {
           </Card>
         </div>
         
-        <div className="text-center animate-fade-in">
+        {/* <div className="text-center animate-fade-in">
           <Card className="max-w-lg mx-auto border-heartfelt-300 shadow-md">
             <CardHeader className="pb-2">
               <div className="mx-auto mb-2">
@@ -91,7 +92,7 @@ const FutureSection = () => {
               </p>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
       </div>
     </section>
   );

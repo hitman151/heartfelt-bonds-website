@@ -38,22 +38,22 @@ const ContactSection = () => {
         <div className="text-center mb-8 animate-fade-in">
           <MessageCircle className="inline-block text-heartfelt-500 w-8 h-8 mb-4" />
           <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-4">Send Me A Message</h2>
-          <p className="text-muted-foreground max-w-lg mx-auto">
+          {/* <p className="text-muted-foreground max-w-lg mx-auto">
             I understand if you need time, but whenever you're ready, I'd love to hear from you. 
             Your response means the world to me, even if it's just to let me know you've seen this.
-          </p>
+          </p> */}
         </div>
         
         <Card className="border-heartfelt-300 shadow-md animate-fade-in">
           <form onSubmit={handleSubmit}>
             <CardHeader className="pb-2">
-              <h3 className="text-xl font-semibold font-playfair">Share Your Thoughts</h3>
+              <h3 className="text-xl font-semibold font-playfair"></h3>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <div className="space-y-2">
                   <Textarea 
-                    placeholder="Your message to me..."
+                    placeholder=" Idhar abhi msg mat krna database connect nahi kiye hai mysql ka password ka prblm hogya🥹 "
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="min-h-[150px] border-heartfelt-300 focus:border-heartfelt-500"

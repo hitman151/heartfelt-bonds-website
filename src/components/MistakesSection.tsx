@@ -8,25 +8,25 @@ const MistakesSection = () => {
   const mistakes = [
     {
       mistake: "Not listening when you needed to talk",
-      reflection: "I've realized how important it is to be fully present when you're sharing something. I was often distracted or thinking about my response instead of truly hearing you.",
-      improvement: "I'm practicing active listening by taking notes and asking thoughtful follow-up questions in all my conversations."
+      reflection: "Apne hisab se apne marzi chalate.",
+      improvement: "I had already realized this bhot aage "
     },
     {
-      mistake: "Taking your support for granted",
-      reflection: "I didn't acknowledge how much you were there for me, while I wasn't always there for you in return.",
-      improvement: "I'm keeping a gratitude journal and making sure to express appreciation directly when someone helps me."
+      mistake: "Talked to you very rudely",
+      reflection: "Mera kbhi aesa intention nahi h ya tha ki tumko kabhi Hurt kare",
+      improvement: "already bhot aage hogye isliye wait kr rhe the tumhara msg aane ka but aaya nahi isliye daaaru pine ka wait kr rhe the taki tumse baat kr paaye"
     },
     {
-      mistake: "Sharing what you told me in confidence",
-      reflection: "I broke your trust by sharing something personal that you told me privately. Trust is sacred and hard to rebuild once broken.",
-      improvement: "I've created clear boundaries about what information stays private and am practicing discretion in all my relationships."
+      mistake: "Aage ab bata nahi skte hai kya mistake krenge ",
+      reflection: "I dont know what mistakes i will make but i will always fix them",
+      improvement: "........."
     }
   ];
 
   // Promise tracker progress
   const promises = [
     { promise: "Check in regularly without expecting anything in return", progress: 75 },
-    { promise: "Practice patience and understanding", progress: 60 },
+    { promise: "Ab se ache se baat krenge with full understanding", progress: 100000 },
     { promise: "Respect your boundaries", progress: 90 },
     { promise: "Be honest about my feelings", progress: 80 },
     { promise: "Take responsibility for my actions", progress: 85 }
@@ -38,10 +38,10 @@ const MistakesSection = () => {
         <div className="text-center mb-8 animate-fade-in">
           <User className="inline-block text-heartfelt-500 w-8 h-8 mb-4" />
           <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-4">My Reflection</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          {/* <p className="text-muted-foreground max-w-2xl mx-auto">
             I've spent time reflecting on the mistakes I've made and how I can grow from them. 
             This isn't just about words—it's about actions and change.
-          </p>
+          </p> */}
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12 animate-fade-in">
@@ -69,10 +69,10 @@ const MistakesSection = () => {
             <h3 className="text-xl font-semibold font-playfair mb-6">My Promise Tracker</h3>
             <Card className="border-heartfelt-300 shadow-sm">
               <CardContent className="pt-6">
-                <p className="mb-6">
+                {/* <p className="mb-6">
                   These are the commitments I'm making to be a better friend to you. 
                   I'm tracking my progress to keep myself accountable.
-                </p>
+                </p> */}
                 <div className="space-y-5">
                   {promises.map((item, index) => (
                     <div key={index}>
@@ -85,9 +85,9 @@ const MistakesSection = () => {
                   ))}
                 </div>
                 <div className="mt-6 pt-4 border-t text-sm">
-                  <p className="italic text-muted-foreground">
+                  {/* <p className="italic text-muted-foreground">
                     I know actions speak louder than words. This tracker helps me stay focused on making real change.
-                  </p>
+                  </p> */}
                 </div>
               </CardContent>
             </Card>

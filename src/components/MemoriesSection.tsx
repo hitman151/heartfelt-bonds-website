@@ -1,48 +1,60 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Book, Calendar, Image, Music } from "lucide-react";
 
 const MemoriesSection = () => {
-  // Sample memories - replace with your actual memories
+  // Memory timeline - keep your text
   const memories = [
     {
-      date: "January 15, 2019",
+      date: "I guess AUG end, 2019",
       title: "The Day We Met",
-      description: "Remember that rainy afternoon in the campus library? You shared your umbrella with me when I forgot mine."
+      description: "Jab hum actual mei notice kiye and you were crying sitting in the backseat"
     },
     {
-      date: "March 20, 2020",
-      title: "Road Trip Adventure",
-      description: "Our spontaneous weekend road trip where we got lost and found that amazing little diner with the best milkshakes."
+      date: "OCT 18, 2019",
+      title: "Iss din se sab start hua 😢",
+      description: "The day I was completely broken but I found a feeling aur ek insan(chudail) who still matters the most"
     },
     {
-      date: "July 4, 2021",
-      title: "Fireworks Night",
-      description: "Watching fireworks from the rooftop and making those ridiculous future plans. I still have the napkin where we wrote them down."
+      date: "idk i guess around nov, 2019",
+      title: "when you were crying",
+      description: "IDK kyu ro rhi thi but iam still the same person infact a more mature guy now ,who gave you the handkerchief"
     },
     {
-      date: "December 24, 2021",
-      title: "Holiday Cookie Baking",
-      description: "The great cookie disaster in my kitchen where we set off the smoke alarm and had to explain to my neighbors why the hallway smelled like burnt chocolate."
+      date: "Yh bhi nahi pata, 2021",
+      title: "this one is for all the assignments jo tum mere liye likhi h",
+      description: "College k starting mei toh bhot yaad aaya iske liye😂, but thank you jitna bhi busy thi atleast 1 page toh likh hi deti thi....but tum mere liye zrurt pe available thi in short yh bolna tha mereko "
     },
   ];
 
-  // Sample photos - replace with your actual photo descriptions
+  // PHOTOS - ONLY REPLACE THESE IMAGE NAMES
   const photos = [
-    { id: 1, description: "Us at the beach sunset, building that enormous sand castle" },
-    { id: 2, description: "Your birthday surprise party where everyone wore silly hats" },
-    { id: 3, description: "The hiking trip where we saw that family of deer" },
-    { id: 4, description: "Coffee shop study session with our ridiculous tower of empty cups" },
-    { id: 5, description: "Halloween costumes as salt and pepper shakers" },
+    { 
+      id: 1, 
+      description: "pliz mt daraoooo",
+      src: "/images/img1.jpg" // Put your image in public/images folder
+    },
+    { 
+      id: 2, 
+      description: "Im sorry🙂",
+      src: "/images/img2.jpg" // Put your image in public/images folder
+    },
   ];
-  
-  // Sample songs - replace with your actual playlist
+
+  // SONGS - ONLY REPLACE THESE AUDIO NAMES
   const songs = [
-    { title: "Our Song", artist: "Taylor Swift", memory: "Always reminds me of our road trips" },
-    { title: "Count On Me", artist: "Bruno Mars", memory: "The song that was playing when we made our friendship pact" },
-    { title: "Good Old Days", artist: "Macklemore", memory: "Remember singing this at karaoke night?" },
-    { title: "Lean On", artist: "Major Lazer", memory: "Our go-to dance song" },
+    { 
+      title: "TU baat kare ya na mujhse", 
+      artist: "bulleya song", 
+      memory: "",
+      src: "/audio/audio1.mp3" // Put your audio in public/audio folder
+    },
+    { 
+      title: "Mein kaha kho gya aesa kya hogya ", 
+      artist: "Mehrama", 
+      memory: "",
+      src: "/audio/audio2.mp3" // Put your audio in public/audio folder
+    },
   ];
 
   return (
@@ -55,7 +67,7 @@ const MemoriesSection = () => {
             These moments we shared mean so much to me. They're the foundation of our friendship and a reminder of what we can rebuild.
           </p>
         </div>
-        
+
         <Tabs defaultValue="timeline" className="w-full animate-fade-in">
           <TabsList className="grid w-full grid-cols-3 md:max-w-md mx-auto mb-8">
             <TabsTrigger value="timeline">
@@ -68,7 +80,8 @@ const MemoriesSection = () => {
               <Music className="w-4 h-4 mr-2" /> Playlist
             </TabsTrigger>
           </TabsList>
-          
+
+          {/* Timeline Section - Keep as is */}
           <TabsContent value="timeline" className="animate-fade-in">
             <div className="relative border-l-2 border-heartfelt-300 ml-4 pl-8 space-y-10 py-4">
               {memories.map((memory, index) => (
@@ -91,13 +104,22 @@ const MemoriesSection = () => {
               ))}
             </div>
           </TabsContent>
-          
+
+          {/* Fixed Photos Section */}
           <TabsContent value="photos" className="animate-fade-in">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {photos.map((photo) => (
-                <Card key={photo.id} className="overflow-hidden border-heartfelt-300 shadow-md hover-scale">
-                  <div className="aspect-video bg-muted flex items-center justify-center">
-                    <Image className="w-12 h-12 text-muted-foreground" />
+                <Card key={photo.id} className="overflow-hidden border-heartfelt-300 shadow-md hover:scale-[1.02] transition-transform h-full">
+                  <div className="aspect-video bg-muted relative">
+                    <img 
+                      src={photo.src}
+                      alt={photo.description}
+                      className="w-full h-full object-contain absolute inset-0 p-2"
+                      loading="lazy"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = '/placeholder.svg';
+                      }}
+                    />
                   </div>
                   <CardContent className="p-4">
                     <p className="text-sm text-center italic">{photo.description}</p>
@@ -105,11 +127,9 @@ const MemoriesSection = () => {
                 </Card>
               ))}
             </div>
-            <p className="text-center mt-6 text-sm text-muted-foreground">
-              (Add your actual photos here by uploading them to the project)
-            </p>
           </TabsContent>
-          
+
+          {/* Fixed Audio Section */}
           <TabsContent value="playlist" className="animate-fade-in">
             <Card className="border-heartfelt-300">
               <CardContent className="pt-6">
@@ -123,17 +143,24 @@ const MemoriesSection = () => {
                         </div>
                         <Music className="w-5 h-5 text-heartfelt-500" />
                       </div>
-                      <p className="mt-2 text-sm italic">{song.memory}</p>
+                      <audio 
+                        controls 
+                        className="w-full mt-3"
+                        onError={(e) => console.log('Audio error:', e)}
+                      >
+                        <source src={song.src} type="audio/mpeg" />
+                        Your browser does not support audio
+                      </audio>
                     </div>
                   ))}
                 </div>
               </CardContent>
             </Card>
             <p className="text-center mt-6">
-              <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-heartfelt-500 hover:text-heartfelt-400 story-link">
+              <button className="inline-flex items-center text-heartfelt-500 hover:text-heartfelt-400 story-link">
                 <Music className="w-4 h-4 mr-2" />
-                View Full Playlist
-              </a>
+                Play All Songs
+              </button>
             </p>
           </TabsContent>
         </Tabs>
